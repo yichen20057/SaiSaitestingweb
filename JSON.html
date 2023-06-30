@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    
+    <!-- data table cdn -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+    <!-- simple pagination -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/simplePagination.min.css">
+
+</head>
+<body>
+    <h2>JSON</h2>
+    <script>
+        var phone = '{ "mobile_phone" : [' +
+        '{ "company":"Apple", "name":"Iphone"},' +
+        '{ "company":"Xiaomi", "name":"Mi" },' +
+        '{ "company":"Asus", "name":"ROG"},'+
+        '{ "company":"Samsung", "name":"Galaxy" } ]}';
+
+        document.write(phone + "<br><br>");
+        var jsophone = JSON.parse(phone);
+
+        document.write("Index 0 of Company data : " + jsophone.mobile_phone[0].company + "<br>")
+        document.write("Index 0 of Name data : " + jsophone.mobile_phone[0].name + "<br><br>")
+        document.write("Index 1 of Company data : " + jsophone.mobile_phone[1].company + "<br>")
+        document.write("Index 1 of Name data : " + jsophone.mobile_phone[1].name + "<br><br>")
+        document.write("Index 2 of Company data : " + jsophone.mobile_phone[2].company + "<br>")
+        document.write("Index 2 of Name data : " + jsophone.mobile_phone[2].name + "<br><br>")
+        document.write("Index 3 of Company data : " + jsophone.mobile_phone[3].company + "<br>")
+        document.write("Index 3 of Name data : " + jsophone.mobile_phone[3].name + "<br><br>")
+    </script>
+
+    <br><br><hr><br><br>
+
+    <script>
+                var mobile = '{ "phone" : [' +
+        '{ "company":"Apple", "name":"Iphone" , "model":"14pro max" , "storage":"128 gb"},' +
+        '{ "company":"Xiaomi", "name":"Mi" , "model":"13 ultra" , "storage":"256 gb,12gb"},' +
+        '{ "company":"Asus", "name":"ROG" , "model":"7 ultra" , "storage":"256 gb,16gb"},'+
+        '{ "company":"Samsung", "name":"Galaxy" , "model":"23 ultra" , "storage":"256 gb,16gb"} ]}';
+
+        var phoneobj = JSON.parse(mobile);
+
+        document.write("Row count" + phoneobj.phone.length + "<br><br>");
+        for (let index = 0; index < phoneobj.phone.length; index++)
+        {
+            document.write("Row index" + index + "and col company data : " + phoneobj.phone[index].company + "<br>")
+            document.write("Row index" + index + "and col name data : " + phoneobj.phone[index].name + "<br>")
+            document.write("Row index" + index + "and col model data : " + phoneobj.phone[index].model + "<br>")
+            document.write("Row index" + index + "and col storage data : " + phoneobj.phone[index].storage + "<br><br>")
+        }
+    </script>
+
+<br><br><hr><br><br>
+ <h2>Phone List</h2>
+ <table id="myTable" class="display">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Company</th>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Storage</th>
+        </tr>
+    <tbody>
+        <script>
+            for (let index = 0; index < phoneobj.phone.length; index++) 
+            {
+                document.write("<tr>")
+                    document.write("<td>" + (index+1) + "</td>")
+                    document.write("<td>" + phoneobj.phone[index].company + "</td>")
+                    document.write("<td>" + phoneobj.phone[index].name + "</td>")
+                    document.write("<td>" + phoneobj.phone[index].model + "</td>")
+                    document.write("<td>" + phoneobj.phone[index].storage + "</td>")
+                document.write("</tr>")
+            }
+
+            $(document).ready( function () {
+            $('#myTable').DataTable();
+            } );
+
+        </script>
+    </tbody>
+ </table>
+
+ <br><br><hr><br><br>
+
+ <script>
+             var mobile = '{ "phone" : [' +
+     '{ "company":"Apple", "name":"Iphone" , "model":"14pro max" , "storage":"128 gb" ,"productimg":"Media/Photos/Iphone-14promax.jpg" },' +
+     '{ "company":"Xiaomi", "name":"Mi" , "model":"13 ultra" , "storage":"256 gb,12gb" , "productimg":"Media/Photos/mi-13ultra.jpg"},' +
+     '{ "company":"Asus", "name":"ROG" , "model":"7 ultra" , "storage":"256 gb,16gb" , "productimg":"Media/Photos/rog-7ultra.jpg"},'+
+     '{ "company":"Samsung", "name":"Galaxy" , "model":"23 ultra" , "storage":"256 gb,16gb" , "productimg":"Media/Photos/glaxy-23ultra.jpg"} ]}';
+
+     var phoneobj = JSON.parse(mobile);
+
+     document.write("Row count" + phoneobj.phone.length + "<br><br>");
+     for (let index = 0; index < phoneobj.phone.length; index++)
+     {
+         document.write("Row index" + index + "and col company data : " + phoneobj.phone[index].company + "<br>")
+         document.write("Row index" + index + "and col name data : " + phoneobj.phone[index].name + "<br>")
+         document.write("Row index" + index + "and col model data : " + phoneobj.phone[index].model + "<br>")
+         document.write("Row index" + index + "and col storage data : " + phoneobj.phone[index].storage + "<br><br>")
+         document.write("<img src='" +  phoneobj.phone[index].productimg + " ' width='150px' height='150px'><br><br>" )
+     };
+ </script>
+
+<br><br><hr><br><br>
+
+<style>
+    #product-dis
+    {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin: auto;
+        row-gap: 50px;
+        flex-wrap: wrap;
+    }
+    #product-dis > .item-dis
+    {
+        width: 360px;
+        padding: 20px;
+        box-shadow: 1px 1px 4px 4px grey;
+        border-radius: 20px;
+        font-family: calibri;
+        font-size: 13pt;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+    }
+    td
+    {
+        text-align: center;
+    }
+    a
+    {
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 8px 25px;
+        font-weight: bold;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+</style>
+
+<hr>
+    <h2 align="center">Product Display</h2>
+
+<section id="product-dis">
+        <script>
+        for (let index = 0; index < phoneobj.phone.length; index++) 
+            {   
+                document.write("<div class='item-dis'>");
+                document.write("<img src = '" + phoneobj.phone[index].productimg + "' width='80%' style='margin:auto;margin-left:40px; margin-bottom:50px;'>");
+                document.write("<table width='100%' height='180px'>");
+                    document.write("<tr>");
+                        document.write("<td>Company: </td>");
+                        document.write("<td>" + phoneobj.phone[index].company + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Name: </td>");
+                        document.write("<td>" + phoneobj.phone[index].name + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Model: </td>");
+                        document.write("<td>" + phoneobj.phone[index].model + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Storage: </td>");
+                        document.write("<td>" + phoneobj.phone[index].storage + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td colspan='2'><a href=''>More Detail</a></td>");
+                    document.write("</tr>");
+                document.write("</table>");
+                document.write("</div>");
+            }
+            </script>
+</section>
+<article id="pdcard-art" style="margin: auto; width: fit-content; margin-top: 40px; "></article>
+<script>
+        var items = $('.item-dis');
+                var numItems = items.length;
+                var perPage = 2;
+        
+                items.slice(perPage).hide();
+        
+                $(function() {
+                    $('#pdcard-art').pagination({
+                        items: numItems,
+                        itemsOnPage: perPage,
+                        prevText: "<",
+                        nextText: ">",
+                        cssStyle:'dark-theme',
+                        onPageClick: function(pageNumber) {
+                            var showFrom = perPage * (pageNumber - 1);
+                            var showTo = showFrom + perPage;    
+                            items.hide().slice(showFrom, showTo).show();
+                        }
+                    });
+                });
+</script>
+</body>
+</html>
+
+
+
+<!-- 
+    var items = $('.list-item');
+                var numItems = items.length;
+                var perPage = 3;
+        
+                items.slice(perPage).hide();
+        
+                $(function() {
+                    $('#pagination-container').pagination({
+                        items: numItems,
+                        itemsOnPage: perPage,
+                        prevText: "<",
+                        nextText: ">",
+                        onPageClick: function(pageNumber) {
+                            var showFrom = perPage * (pageNumber - 1);
+                            var showTo = showFrom + perPage;
+                            items.hide().slice(showFrom, showTo).show();
+                        }
+                    });
+                });
+ -->

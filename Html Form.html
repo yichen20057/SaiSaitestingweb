@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>HTML Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        h2
+        {
+            text-align: center;
+            color: blue;
+        }
+        fieldset
+        {
+            width: 35%;
+            margin: auto;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        input[type='reset']
+        {
+         
+        }
+        input,select
+        {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        ,input[type='password'],input[type='email']
+        {
+            width: 100px;
+        }
+        input[type='text']
+        {
+            width:80px ;
+        }
+        input[type='submit'],input[type='reset'],input[type='buttom']
+        {
+            font-family: 'Ubuntu', sans-serif;font-family: 'Ubuntu', sans-serif;
+        }
+        td
+        {
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2  style="font-family: 'Comfortaa', cursive; ">People List</h2>
+        <form action="">
+<fieldset>
+    <legend style="border: 0px solid black;">Creat new account</legend>     
+     <table border="0" cellspacing="0px" width="480" height="440">
+        <tr>
+        <td>Name:
+
+        </td>
+        <td><input type="name" name="txtname" placeholder="Eg: Mg Mg" required>
+
+        </td>
+     </tr>
+        <tr>
+        <td>Email:
+
+        </td>
+        <td><input type="email" name="txtemail" placeholder="Eg:a@gmail.com" required>
+
+        </td>
+     </tr>
+     <tr>
+        <td>Password:
+
+        </td>
+        <td><input type="password" name="txtpass" minlength="8" placeholder="********" required >
+            <input type="reset" value="x">
+
+        </td>
+     </tr>
+     <tr>
+        <td>
+            Date of birth:
+        </td>
+        <td>
+            <input type="date" name="txtdob" required>
+        </td>
+     </tr>
+     <tr>
+        <td>Phone: </td>
+        <td><input type="text" name="" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+             minlength="6" maxlength="11" placeholder="Eg:09123456" required></td>
+     </tr>
+     <tr>
+        <td>Gender:</td>
+        <td><input type="radio" name="rdogender" checked value="Male">Male
+        <input type="radio" name="rdogender" value="Female">Female
+        <input type="radio" name="rdogender" value="other">other</td>
+     </tr>
+     <tr>
+        <td>NRC:</td>
+        <td><select name="nrc1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select> /
+        <select name="nrc2" >
+            <option value="Ta Ma Na">Ta Ma Na</option>
+            <option value="La MA Na">La MA Na</option>
+            <option value="La Ya Ra">La Ya Ra</option>
+        </select> (
+       <select name="nrc3" >
+        <option value="Ng">Ng</option>
+        <option value="Phu">Pyu</option>
+        <option value="Ei">Ei</option>
+        </select> )
+        <input type="text" name="nrc4" style="width: 35px;" onkeypress="return(event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+         maxlength="6" minlength="6" placeholder="000000" required>
+        </td>
+
+     </tr>
+        <tr>
+            <td>Profile picture:</td>
+            <td><input type="file" name="" id="txtprofile" required></td>
+        </tr>
+        <tr>
+            <td>Adress:</td>
+            <td><textarea name="txtaddress"  cols="19" rows="4" style="resize: none" placeholder="No.00th,00tj floor,exa,ple qtr,example tsp,city" required></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" name="chatern" required>Agreed Terms and Condition</td>
+        </tr>
+
+      <tr>
+        <td colspam="2">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+            <input type="button" value="Buttom">
+        </td>
+      </tr>  
+    </table>
+</fieldset>
+    </form>
+    
+</body>
+</html>
+
+<!-- 
+   onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+   CSS
+   ---
+   External Css
+    Internal Css    => <style> selector(html tag){property: value;} </style>
+    Inline Css  => <tag style="property:value;"></tag>
+ -->

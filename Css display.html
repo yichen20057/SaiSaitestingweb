@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+<style>
+#lab1
+{
+    border: 2px solid black;
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+    display: block;
+}
+
+.div1
+{
+    border: 2px solid red;
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+    /* display: inline; */
+    
+}
+#product-card
+{
+    width: 340px;
+    margin: 20px;
+    box-shadow: 1px 1px 8px 2px black;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    font-family: calibri;
+}
+td{min-width: 105px;}
+.detail
+{
+ text-decoration: none;
+ display: block;
+ border: 2px solid black;
+ padding: 8px 20px 8px 10px;
+ width: fit-content;
+ background-color: blue;
+ color: white;
+ border-radius: 14px;
+ margin: auto;
+ transform: translate(-30%,0);
+}
+.detail:hover
+{
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+.mydiv1
+{
+    border: 1px solid black;
+    width: 340px;
+    display: inline-block;
+    vertical-align: center;
+}
+.mydiv2
+{
+    border: 1px solid red;
+    width: 410px;
+    display: inline-block;
+    vertical-align: center;
+}
+.mydiv3
+{
+    border: 1px solid gold;
+    width: 460px;
+    display: inline-block;
+    vertical-align: center;
+}
+</style>
+
+</head>
+<body>
+    <label id="lab1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente totam quidem id cupiditate unde molestiae expedita aperiam, quam dolores, deserunt magni assumenda itaque asperiores amet quis. Quia assumenda dolor amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fugiat minima nemo unde maxime cumque ullam error possimus, impedit suscipit atque neque quo sunt dolorem doloremque, mollitia tenetur! Labore, nihil!</label>
+    <style>
+        .dis-example
+        {
+            display: none;
+            /* display: block; */
+        }
+    </style>
+
+    <hr>
+    <label class="dis-example">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </label>
+    <hr>
+
+    <div class="div1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatem nulla soluta sapiente porro? Dolores maiores nemo laudantium nulla alias cum veniam tenetur corporis. Aperiam assumenda labore ducimus et cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit dolorem illum, dolore delectus vitae est fugiat cumque, impedit harum nemo quas, sequi error illo provident omnis atque expedita ipsam.</div>
+    <hr>
+<div style="display: flex;">
+    <div id="product-card1">
+        <img src="Media/Photos/acer-nitro-5-an515-gaming-laptop-i5-12th-gen-black-990652.jpg" width="100%" style="transform: scale(.8); margin-bottom: 1opx;" >
+        <table border="0" width="100% height=160px">
+            <tr>
+                <td><label>Laptop :</label></td>
+                <td>Nitro 5 Gaming</td>
+            </tr>
+            <tr>
+                <td><label>Brand :</label></td>
+                <td>Acer</td>
+            </tr>
+            <tr>
+                <td><label>Specification :</label></td>
+                <td>CPU: i5 11 gen<br>GPU: RTX 3050 4gb</td>
+            </tr>
+            <tr>
+                <td colspan="2" ><a href="" class="detail">More Detail</a></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        ScrollReveal().reveal('#product-card1', {
+    delay: 400,    // 1000 milisec = 1s  //
+    duration: 2000,
+    reset: true,
+    distance: '400px',
+    origin: 'left'
+    });
+    </script>
+    
+    <div id="product-card2">
+        <img src="Media/Photos/acer-nitro-5-an515-gaming-laptop-i5-12th-gen-black-990652.jpg" width="100%" style="transform: scale(.8); margin-bottom: 1opx;" >
+        <table border="0" width="100% height=160px">
+            <tr>
+                <td><label>Laptop :</label></td>
+                <td>Nitro 5 Gaming</td>
+            </tr>
+            <tr>
+                <td><label>Brand :</label></td>
+                <td>Acer</td>
+            </tr>
+            <tr>
+                <td><label>Specification :</label></td>
+                <td>CPU: i5 11 gen<br>GPU: RTX 3050 4gb</td>
+            </tr>
+            <tr>
+                <td colspan="2" ><a href="" class="detail">More Detail</a></td>
+            </tr>
+        </table>
+        <script>
+            ScrollReveal().reveal('#product-card2', {
+        delay: 400,    // 1000 milisec = 1s  //
+        duration: 2000,
+        reset: true,
+        distance: '400px',
+        origin: 'left'
+        });
+        </script>
+    </div>
+</div>
+    <hr>
+
+
+    <div class="mydiv1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit quisquam delectus accusamus repellat labore nobis voluptas atque? Omnis, voluptas placeat officia itaque autem deserunt molestiae dolores veniam adipisci sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et possimus vel reiciendis saepe illum corrupti asperiores, perferendis soluta totam. Expedita accusantium omnis nulla itaque exercitationem vero voluptas temporibus odio.</div>
+    <div class="mydiv2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti consequatur modi voluptate repudiandae perferendis s, totam, alias harum suscipit ab cum a veritatis? Qui ipsam omnis magni illum?</div>
+    <div class="mydiv3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius autem repudiandae, culpa numquam sapiente ipsa eos voluptatibus rerum rem quae iure minus in assumenda ipsum! Aliquid inventore perferendis omnis totam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quasi quisquam ea alias consequuntur impedit, harum debitis at inventore minima ipsam i.</div>
+</body>
+</html>

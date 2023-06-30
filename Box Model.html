@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        #para1
+        {
+         border-style: solid;
+         border-color: black;
+         border-width: 10px;
+         border-top-style: double;
+         border-left-style: dashed;
+         border-right-style: dotted;
+         border-bottom-style: ridge;
+
+         border-top-width:5px ;
+         border-bottom-width:10px ;
+         border-left-width:1px ;
+         border-right-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quam odit alias, voluptates recusandae asperiores id, beatae cumque eos perferendis minima nostrum quisquam aspernatur facilis omnis soluta! Voluptatibus, dignissimos vero.</p>
+<label style="border: 2px solid black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, beatae adipisci! Ipsum aut quibusdam laborum iste ab unde sequi tempora pariatur quaerat sit, beatae molestiae quas quod id labore officia?</label><br><br>
+<label style="border: 2px solid black; padding: 10px; border-top-left-radius: 50px; border-bottom-right-radius: 50px;"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, beatae adipisci!</label>
+<br><br><br>
+
+<input type="text" class="txtbox1" placeholder="Enter Username"><br>
+<br>
+<style>
+
+    body
+    {
+        background-image: url(Media/Photos/1.jpg);
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        background-position: center center;
+        backdrop-filter: blur(2px);
+        background-attachment: fixed;
+    }
+
+
+
+    .txtbox1
+    {
+      border-color: rgb(0,0,225,.8);  
+      border-style: solid;
+      border-width: 2px;
+      border-top-style: none;
+      border-left-style: none;
+      border-right-style: none;
+      outline: none;
+      width: 150px;
+    }
+
+    .myimg1
+    {
+      border-radius: 50%;
+    }
+
+    .myimg3
+    {
+        border: 1px solid black;
+        width: fit-content;
+        border-radius: 50%
+    }
+    .myimg2
+    {
+        border-radius:36% ;
+    }
+
+    #mydiv3
+    {
+        text-align: justify;
+        border: 1px solid black;
+        /* padding: 20px; */
+        /* padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px; */
+
+        
+        
+    }
+
+
+</style>
+    <img src="Media/Photos/house-solid.svg" alt="" width="140px" height="auto" class="myimg1" border="2px" ><br><br>
+
+   <div class="myimg3" border="1px"><img src="Media/Photos/house-solid.svg" alt="" width="140px" height="auto" class="myimg2" ></div><br>
+   <h2>Padding</h2>
+   
+   <div id="mydiv3">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit placeat tempore totam repellendus fugiat consectetur sequi iure eaque non! Voluptates sequi nulla repellendus vitae? Quas tenetur molestiae modi atque odit.
+   </div>
+<br>
+<h2>Margin</h2>
+<div id="mydiv4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus atque fugiat reprehenderit nesciunt praesentium. Rerum unde magnam exercitationem porro reiciendis facilis sed incidunt accusamus totam aperiam doloribus sequi, ratione delectus!</div>
+<style>
+#mydiv4
+{
+    width: 50%;
+    border: 1px solid black;
+    /* margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px; */
+    /* margin: 50px; */
+    /* margin: 20px 50px; */
+    /* margin: 50px 100px  20px; */
+    margin: 50px 100px 0 100px;
+    margin-bottom: 100px;
+}
+</style>
+
+<h2>List image</h2>
+
+<style>
+    ul
+    {
+        /* border: 1px solid black; */
+        width: fit-content;
+        padding-left: 0px;
+        margin-top: ;
+
+    }
+
+    ul > li
+    {
+        
+        /* cursor: url('Media/Photos/house-solid.svg'),auto; */
+        list-style-type: none;
+    }
+    ul>li::before
+    {
+        /* border: 1px solid red; */
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 16px;
+        background-image: url(Media/Photos/house-solid.svg);
+        background-size: 100% 100%;
+        vertical-align: top;
+        margin-right: 15px;
+    }
+</style>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milo</li>
+</ul>
+</body>
+</html>
